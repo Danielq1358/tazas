@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7f2">
+  <meta name="description" content="Consulta los días de atención de Tazita Studio.">
+  <title>Días de atención — Tazita Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="supabase-config.js" defer></script>
+  <script src="availability.js" defer></script>
+</head>
+<body class="availability-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Tazita Studio, inicio">
+      <span class="brand-mark" aria-hidden="true">t.</span>
+      <span>Tazita <b>Studio</b><small>Hecho con cariño</small></span>
+    </a>
+    <a class="button button-outline" href="index.html">← Volver a la tienda</a>
+  </header>
+  <main class="availability-main">
+    <section class="availability-card">
+      <span class="eyebrow">ESTAMOS PARA AYUDARTE</span>
+      <h1>Días de <em>atención</em></h1>
+      <p class="availability-lead">Consulta qué días podemos atenderte. El horario de atención es de <strong>10:00 a. m. a 5:30 p. m.</strong></p>
+      <div class="schedule-status" id="schedule-status" role="status" aria-live="polite">Cargando disponibilidad…</div>
+      <div class="week-grid" id="week-grid" aria-label="Disponibilidad semanal"></div>
+      <p class="availability-footnote">La disponibilidad puede cambiar. Envíanos tu pedido para confirmar.</p>
+    </section>
+
+    <section class="admin-card" aria-labelledby="admin-title">
+      <div class="admin-heading">
+        <div><span class="eyebrow">SOLO ADMINISTRADOR</span><h2 id="admin-title">Administrar calendario</h2></div>
+        <span class="admin-lock" aria-hidden="true">♙</span>
+      </div>
+      <p class="admin-description">Inicia sesión con la cuenta autorizada para marcar tus días disponibles. Los visitantes solo pueden consultar el calendario.</p>
+      <form class="admin-login" id="admin-login">
+        <label>Correo de administrador<input type="email" name="email" value="Mauriciodanielriveracruz@gmail.com" autocomplete="username" required></label>
+        <label>Contraseña<input type="password" name="password" autocomplete="current-password" required></label>
+        <button class="button button-primary" type="submit">Iniciar sesión</button>
+      </form>
+      <div class="admin-session" id="admin-session" hidden>
+        <p class="admin-signed-in">Sesión de administrador activa.</p>
+        <button class="button button-outline" id="admin-logout" type="button">Cerrar sesión</button>
+      </div>
+      <p class="admin-message" id="admin-message" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">t.</span><span>Tazita <b>Studio</b><small>Hecho con cariño</small></span></a>
+    <p>Una taza hecha para ti, con cariño. <span>♡</span></p>
+    <a href="mailto:Mauriciodanielriveracruz@gmail.com">Hablemos de tu idea</a>
+  </footer>
+</body>
+</html>

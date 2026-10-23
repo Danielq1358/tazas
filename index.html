@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7f2">
+  <meta name="description" content="Diseña una taza personalizada y pide la tuya en Tazita Studio.">
+  <title>Tazita Studio — Tu idea, en una taza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <section class="entry-screen" id="entry-screen" aria-labelledby="entry-title">
+    <div class="entry-shade" aria-hidden="true"></div>
+    <div class="entry-content">
+      <a class="brand entry-brand" href="#entry-title" aria-label="Tazita Studio">
+        <span class="brand-mark" aria-hidden="true">t.</span>
+        <span>Tazita <b>Studio</b><small>Hecho con cariño</small></span>
+      </a>
+      <form class="entry-card" id="entry-form">
+        <span class="eyebrow">UN TALLER HECHO PARA TI</span>
+        <h1 id="entry-title">Tu próxima idea<br>empieza con una <em>taza.</em></h1>
+        <p class="entry-intro">Completa estos datos para entrar y descubrir nuestros diseños personalizados.</p>
+        <div class="entry-fields">
+          <label for="entry-first-name">Nombre
+            <input id="entry-first-name" name="firstName" type="text" autocomplete="given-name" maxlength="60" required>
+          </label>
+          <label for="entry-last-name">Apellido
+            <input id="entry-last-name" name="lastName" type="text" autocomplete="family-name" maxlength="60" required>
+          </label>
+          <label for="entry-age">Edad
+            <input id="entry-age" name="age" type="number" min="1" max="120" inputmode="numeric" required>
+          </label>
+          <label for="entry-gender">Género
+            <select id="entry-gender" name="gender" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="mujer">Mujer</option>
+              <option value="hombre">Hombre</option>
+              <option value="otro">Otro</option>
+              <option value="prefiero-no-decir">Prefiero no decirlo</option>
+            </select>
+          </label>
+        </div>
+        <p class="delivery-notice"><span aria-hidden="true">⌖</span><span><strong>Zona de entrega limitada</strong><br>Por ahora, solo entregamos cerca de la calle El Tavo, comuna La Granja.</span></p>
+        <p class="entry-privacy">Tus datos se guardan solo en este navegador para personalizar tu visita. No se envían ni se sincronizan con otros dispositivos.</p>
+        <p class="entry-error" id="entry-error" role="alert" hidden></p>
+        <button class="button button-primary entry-submit" type="submit">Entrar a la tienda <span aria-hidden="true">↗</span></button>
+      </form>
+    </div>
+    <div class="entry-gallery" aria-label="Galería de tazas personalizadas">
+      <div class="entry-gallery-track">
+          <div class="entry-gallery-group">
+            <img src="images%20(4).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(5).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(6).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(7).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(8).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(9).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(10).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(11).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(12).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(13).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(14).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(15).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(16).jpe" alt="Taza personalizada de ejemplo" width="225" height="225">
+            <img src="images%20(17).jpe" alt="Taza personalizada de ejemplo" width="554" height="554">
+            <img src="images%20(18).jpe" alt="Taza personalizada de ejemplo" width="421" height="475">
+            <img src="images%20(19).jpe" alt="Taza personalizada de ejemplo" width="480" height="640">
+            <img src="images%20(20).jpe" alt="Taza personalizada de ejemplo" width="194" height="259">
+            <img src="images%20(21).jpe" alt="Taza personalizada de ejemplo" width="228" height="221">
+            <img src="images%20(22).jpe" alt="Taza personalizada de ejemplo" width="508" height="393">
+            <img src="images%20(4).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+            <img src="images%20(5).jpe" alt="Taza personalizada de ejemplo" width="180" height="120">
+          </div>
+          <div class="entry-gallery-group" aria-hidden="true">
+            <img src="images%20(4).jpe" alt="" width="180" height="120">
+            <img src="images%20(5).jpe" alt="" width="180" height="120">
+            <img src="images%20(6).jpe" alt="" width="180" height="120">
+            <img src="images%20(7).jpe" alt="" width="180" height="120">
+            <img src="images%20(8).jpe" alt="" width="180" height="120">
+            <img src="images%20(9).jpe" alt="" width="180" height="120">
+            <img src="images%20(10).jpe" alt="" width="180" height="120">
+            <img src="images%20(11).jpe" alt="" width="180" height="120">
+            <img src="images%20(12).jpe" alt="" width="180" height="120">
+            <img src="images%20(13).jpe" alt="" width="180" height="120">
+            <img src="images%20(14).jpe" alt="" width="180" height="120">
+            <img src="images%20(15).jpe" alt="" width="180" height="120">
+            <img src="images%20(16).jpe" alt="" width="225" height="225">
+            <img src="images%20(17).jpe" alt="" width="554" height="554">
+            <img src="images%20(18).jpe" alt="" width="421" height="475">
+            <img src="images%20(19).jpe" alt="" width="480" height="640">
+            <img src="images%20(20).jpe" alt="" width="194" height="259">
+            <img src="images%20(21).jpe" alt="" width="228" height="221">
+            <img src="images%20(22).jpe" alt="" width="508" height="393">
+            <img src="images%20(4).jpe" alt="" width="180" height="120">
+            <img src="images%20(5).jpe" alt="" width="180" height="120">
+          </div>
+          <div class="entry-gallery-group" aria-hidden="true">
+            <img src="images%20(4).jpe" alt="" width="180" height="120">
+            <img src="images%20(5).jpe" alt="" width="180" height="120">
+            <img src="images%20(6).jpe" alt="" width="180" height="120">
+            <img src="images%20(7).jpe" alt="" width="180" height="120">
+            <img src="images%20(8).jpe" alt="" width="180" height="120">
+            <img src="images%20(9).jpe" alt="" width="180" height="120">
+            <img src="images%20(10).jpe" alt="" width="180" height="120">
+            <img src="images%20(11).jpe" alt="" width="180" height="120">
+            <img src="images%20(12).jpe" alt="" width="180" height="120">
+            <img src="images%20(13).jpe" alt="" width="180" height="120">
+            <img src="images%20(14).jpe" alt="" width="180" height="120">
+            <img src="images%20(15).jpe" alt="" width="180" height="120">
+            <img src="images%20(16).jpe" alt="" width="225" height="225">
+            <img src="images%20(17).jpe" alt="" width="554" height="554">
+            <img src="images%20(18).jpe" alt="" width="421" height="475">
+            <img src="images%20(19).jpe" alt="" width="480" height="640">
+            <img src="images%20(20).jpe" alt="" width="194" height="259">
+            <img src="images%20(21).jpe" alt="" width="228" height="221">
+            <img src="images%20(22).jpe" alt="" width="508" height="393">
+            <img src="images%20(4).jpe" alt="" width="180" height="120">
+            <img src="images%20(5).jpe" alt="" width="180" height="120">
+          </div>
+          <div class="entry-gallery-group" aria-hidden="true">
+            <img src="images%20(4).jpe" alt="" width="180" height="120">
+            <img src="images%20(5).jpe" alt="" width="180" height="120">
+            <img src="images%20(6).jpe" alt="" width="180" height="120">
+            <img src="images%20(7).jpe" alt="" width="180" height="120">
+            <img src="images%20(8).jpe" alt="" width="180" height="120">
+            <img src="images%20(9).jpe" alt="" width="180" height="120">
+            <img src="images%20(10).jpe" alt="" width="180" height="120">
+            <img src="images%20(11).jpe" alt="" width="180" height="120">
+            <img src="images%20(12).jpe" alt="" width="180" height="120">
+            <img src="images%20(13).jpe" alt="" width="180" height="120">
+            <img src="images%20(14).jpe" alt="" width="180" height="120">
+            <img src="images%20(15).jpe" alt="" width="180" height="120">
+            <img src="images%20(16).jpe" alt="" width="225" height="225">
+            <img src="images%20(17).jpe" alt="" width="554" height="554">
+            <img src="images%20(18).jpe" alt="" width="421" height="475">
+            <img src="images%20(19).jpe" alt="" width="480" height="640">
+            <img src="images%20(20).jpe" alt="" width="194" height="259">
+            <img src="images%20(21).jpe" alt="" width="228" height="221">
+            <img src="images%20(22).jpe" alt="" width="508" height="393">
+            <img src="images%20(4).jpe" alt="" width="180" height="120">
+            <img src="images%20(5).jpe" alt="" width="180" height="120">
+          </div>
+      </div>
+    </div>
+  </section>
+  <div id="storefront" hidden>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Tazita Studio, inicio">
+      <span class="brand-mark" aria-hidden="true">t.</span>
+      <span>Tazita <b>Studio</b><small>Hecho con cariño</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#precios">Precios</a>
+      <a href="#disena">Diseña tu taza</a>
+      <a href="#pedir">Pedir</a>
+    </nav>
+    <button class="button button-outline inbox-trigger" id="open-inbox" type="button">
+      <span aria-hidden="true">▤</span> Mis pedidos <span class="inbox-count" id="inbox-count">0</span>
+    </button>
+    <button class="button button-outline logout-trigger" id="logout-button" type="button" aria-label="Cerrar sesión">
+      <svg class="logout-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17l5-5-5-5m5 5H3m9-9h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7"/></svg>
+      <span>Cerrar sesión</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="sparkle">✳</span> UN DETALLE QUE SE USA TODOS LOS DÍAS</span>
+        <p class="welcome-message" id="welcome-message" hidden></p>
+        <h1>Tu idea favorita,<br>en una <em>taza.</em></h1>
+        <p class="hero-description">Diseña algo único, cuéntanos cómo lo imaginas y nosotros lo hacemos realidad. Fácil, personal y hecho con mucho cariño.</p>
+        <div class="hero-actions">
+          <a href="#disena" class="button button-primary">Crear mi diseño <span aria-hidden="true">↗</span></a>
+          <a href="#como-funciona" class="text-link">¿Cómo funciona? <span aria-hidden="true">↓</span></a>
+        </div>
+        <a class="button button-outline availability-link" href="horarios.html" target="_blank" rel="noopener">Ver días de atención <span aria-hidden="true">↗</span></a>
+        <div class="hero-note"><span class="note-stars" aria-hidden="true">★★★★★</span><span>Un regalo pequeño. Una sonrisa enorme.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Taza de ejemplo con diseño de flores">
+        <div class="sun-shape"></div>
+        <div class="hero-sticker sticker-one">hecho<br>para ti <span>♡</span></div>
+        <div class="mug-scene">
+          <div class="mug-handle"></div>
+          <div class="mug">
+            <div class="mug-rim"></div>
+            <div class="mug-art"><span>✿</span><b>un día<br>bonito</b><span>✳</span></div>
+          </div>
+          <div class="mug-shadow"></div>
+        </div>
+        <div class="hero-sticker sticker-two">tu diseño<br>es el plan <span>✳</span></div>
+        <div class="hero-caption">Una taza, mil maneras de decir “pensé en ti”.</div>
+      </div>
+    </section>
+
+    <section class="steps section-wrap" id="como-funciona">
+      <div class="section-heading centered">
+        <span class="eyebrow">ASÍ DE SENCILLO</span>
+        <h2>De tu imaginación <em>a tus manos</em></h2>
+      </div>
+      <div class="step-list">
+        <article class="step-card"><span class="step-number">01</span><span class="step-icon">✎</span><h3>Diseña</h3><p>Dibuja, escribe o sube una imagen para crear algo muy tuyo.</p></article>
+        <article class="step-card"><span class="step-number">02</span><span class="step-icon">♡</span><h3>Cuéntanos</h3><p>Completa tus datos y envíanos tu idea para preparar el pedido.</p></article>
+        <article class="step-card"><span class="step-number">03</span><span class="step-icon">☕</span><h3>¡A disfrutar!</h3><p>Te contactaremos para confirmar los detalles y coordinar la entrega.</p></article>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="precios">
+      <div class="section-wrap pricing-wrap">
+        <div class="section-heading centered">
+          <span class="eyebrow">PRECIOS CLAROS, IDEAS INFINITAS</span>
+          <h2>Una taza especial,<br><em>a un precio bonito.</em></h2>
+        </div>
+        <div class="price-cards">
+          <article class="price-card">
+            <span class="price-icon" aria-hidden="true">☕</span>
+            <h3>Tu taza personalizada</h3>
+            <p>Un diseño hecho especialmente para ti.</p>
+            <strong class="price-amount">$5.000</strong>
+            <span class="price-detail">1 taza</span>
+          </article>
+          <article class="price-card price-card-featured">
+            <span class="price-ribbon">PRECIO ESPECIAL</span>
+            <span class="price-icon" aria-hidden="true">☕☕</span>
+            <h3>Dos tazas personalizadas</h3>
+            <p>Una para ti y otra para regalar.</p>
+            <strong class="price-amount">$8.500</strong>
+            <span class="price-detail">2 tazas · ahorras $1.500</span>
+          </article>
+        </div>
+        <p class="pricing-note">Con 3 o más: las primeras 2 cuestan $8.500 y cada taza adicional cuesta $5.000.</p>
+        <a class="button button-primary pricing-cta" href="#pedir">Quiero pedir <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="design-section" id="disena">
+      <div class="section-wrap design-wrap">
+        <div class="section-heading">
+          <span class="eyebrow">TU LIENZO TE ESPERA</span>
+          <h2>Hazla <em>a tu manera.</em></h2>
+          <p>El área de diseño representa el frente de la taza: <strong>23 × 9 cm</strong>. ¡No hace falta ser artista!</p>
+        </div>
+        <div class="editor-card">
+          <div class="editor-toolbar">
+            <div class="tool-group editor-settings">
+              <label class="tool-label" for="brush-color">Color</label>
+              <input id="brush-color" type="color" value="#da795b" aria-label="Color de dibujo">
+              <div class="editor-history-control" role="group" aria-label="Historial del diseño">
+                <button class="button button-small button-soft history-button" id="undo-design" type="button" aria-label="Deshacer" title="Deshacer" disabled><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5M4 9h9a7 7 0 0 1 0 14h-2"/></svg></button>
+                <button class="button button-small button-soft history-button" id="redo-design" type="button" aria-label="Rehacer" title="Rehacer" disabled><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 14 5-5-5-5m5 5h-9a7 7 0 0 0 0 14h2"/></svg></button>
+              </div>
+            </div>
+            <div class="tool-group drawing-tools" role="group" aria-label="Herramientas de dibujo">
+              <button class="button button-small button-soft tool-select" type="button" data-draw-tool="brush" aria-pressed="true"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6 4 4M4 20l4-.8L19 8a2.8 2.8 0 0 0-4-4L4 15zM4 20c3.5 0 5-1.5 5-4"/></svg><span>Pincel</span></button>
+              <button class="button button-small button-soft tool-select" type="button" data-draw-tool="line" aria-pressed="false"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M7 5H5v2m12 12h2v-2"/></svg><span>Línea</span></button>
+              <button class="button button-small button-soft tool-select" type="button" data-draw-tool="fill" aria-pressed="false"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 8-8 8 8-8 8zM12 4l8 8M17 16h.01M20 15c0 2-1.3 3-3 3"/></svg><span>Relleno</span></button>
+              <div class="eraser-tool-control">
+                <button class="button button-small button-soft tool-select" type="button" data-draw-tool="eraser" aria-pressed="false"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 15 9-10a2 2 0 0 1 3 0l6 6a2 2 0 0 1 0 3l-7 7H8zM8 21h13M9 9l8 8"/></svg><span>Borrador</span></button>
+                <label class="tool-label size-label" for="brush-size" id="brush-size-label">Trazo</label>
+                <input id="brush-size" type="range" min="1" max="48" value="7" aria-label="Tamaño del trazo o borrador">
+              </div>
+            </div>
+            <div class="tool-group text-tools">
+              <label class="visually-hidden" for="canvas-text">Texto para agregar al diseño</label>
+              <input id="canvas-text" type="text" maxlength="100" placeholder="Escribe tu texto">
+              <label class="vertical-text-option" for="vertical-text"><input id="vertical-text" type="checkbox"> Vertical</label>
+              <div class="text-size-control">
+                <label class="tool-label" for="text-size">Tamaño</label>
+                <input id="text-size" type="range" min="16" max="96" value="46" aria-label="Tamaño de letra">
+              </div>
+              <button class="button button-small button-soft" id="add-text" type="button"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6V4h16v2M12 4v16m-4 0h8"/></svg><span>Texto</span></button>
+            </div>
+            <div class="tool-group tool-buttons">
+              <label class="button button-small button-soft upload-button" for="image-upload"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m-5 5 5-5 5 5M4 15v5h16v-5"/></svg><span>Subir imagen</span></label>
+              <input id="image-upload" type="file" accept="image/*" hidden>
+              <div class="image-size-control" id="image-size-control" hidden>
+                <label class="tool-label" for="image-size">Tamaño imagen</label>
+                <input id="image-size" type="range" min="25" max="200" step="1" value="100" aria-label="Tamaño de la imagen subida">
+              </div>
+              <button class="button button-small button-quiet" id="clear-canvas" type="button"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 14h10l1-14M9 7V4h6v3"/></svg><span>Limpiar</span></button>
+            </div>
+          </div>
+          <div class="canvas-frame">
+            <canvas id="design-canvas" width="920" height="360" aria-label="Lienzo para diseñar el frente de tu taza"></canvas>
+            <span class="eraser-cursor" id="eraser-cursor" aria-hidden="true" hidden></span>
+            <span class="canvas-dimensions">23 cm × 9 cm</span>
+          </div>
+          <div class="editor-footer">
+            <span id="canvas-status" role="status" aria-live="polite"><span class="draw-dot"></span> Elige una herramienta y dibuja con el mouse o con tu dedo</span>
+            <button class="text-link" id="download-design" type="button">Descargar diseño <span aria-hidden="true">↓</span></button>
+          </div>
+        </div>
+        <p class="editor-hint">Tu diseño es una referencia para preparar la taza. Revisaremos contigo los detalles antes de imprimir.</p>
+      </div>
+    </section>
+
+    <section class="order-section section-wrap" id="pedir">
+      <div class="order-intro">
+        <span class="eyebrow">EL SIGUIENTE PASO</span>
+        <h2>¿La hacemos <em>realidad?</em></h2>
+        <p>Déjanos tus datos y cuéntanos un poquito más. Nos pondremos en contacto contigo para confirmar el pedido.</p>
+        <div class="order-promise"><span>♡</span><div><strong>Tu idea está en buenas manos</strong><small>Cada pedido se prepara con atención al detalle.</small></div></div>
+      </div>
+      <form class="order-form" id="order-form" name="pedidos" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="pedidos">
+        <input type="hidden" name="subject" value="Nuevo pedido para Tazita Studio">
+        <input type="hidden" name="productPrice">
+        <input type="hidden" name="deliveryPrice">
+        <input type="hidden" name="totalPrice">
+        <input type="hidden" name="deliveryDistanceMeters">
+        <p hidden><label>No rellenes este campo: <input name="bot-field"></label></p>
+        <input type="file" name="design" accept="image/png" hidden>
+        <div class="form-heading"><h3>Cuéntanos de tu pedido</h3><span>Los campos con * son necesarios</span></div>
+        <div class="form-grid">
+          <label>Tu nombre *<input name="name" type="text" placeholder="¿Cómo te llamas?" autocomplete="name" required maxlength="80"></label>
+          <label>Correo electrónico *<input name="email" type="email" placeholder="tu@correo.com" autocomplete="email" required maxlength="120"></label>
+          <label>Teléfono / WhatsApp<input name="phone" type="tel" placeholder="+54 9 ..." autocomplete="tel" maxlength="40"></label>
+          <label>¿Cuántas tazas? *<input name="quantity" id="quantity" type="number" min="1" step="1" value="1" required inputmode="numeric"><small class="quantity-hint">2 tazas por $8.500; desde la tercera, $5.000 por cada taza adicional.</small><small class="price-estimate" id="price-estimate" aria-live="polite">Productos: $5.000</small></label>
+          <fieldset class="fulfillment-options full-width">
+            <legend>¿Cómo quieres recibir tu taza? *</legend>
+            <label><input name="fulfillment" type="radio" value="delivery" required> Que llegue a la puerta de mi casa</label>
+            <label><input name="fulfillment" type="radio" value="pickup" required> Voy a retirarla</label>
+          </fieldset>
+          <div class="delivery-fields full-width" id="delivery-fields" hidden>
+            <label>Dirección de entrega *<input name="deliveryAddress" id="delivery-address" type="text" placeholder="Calle, número, comuna y ciudad" autocomplete="street-address" maxlength="180"><small class="quantity-hint">Solo entregamos cerca de El Tavo, La Granja. Tarifa: $300 por cada 100 m o fracción.</small></label>
+            <label>Distancia de la ruta *<span class="distance-input-group"><input name="deliveryDistance" id="delivery-distance-km" type="number" min="0.01" step="0.01" placeholder="Ej.: 1,4" inputmode="decimal"><select name="deliveryDistanceUnit" id="delivery-distance-unit" aria-label="Unidad de distancia"><option value="km" selected>km</option><option value="m">m</option></select></span><small class="quantity-hint">Abre la ruta en Google Maps, confirma el punto de salida con el vendedor y escribe la distancia que muestra. Es una estimación; el vendedor confirma el envío.</small><a class="text-link maps-route-link" id="maps-route-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=El%20Tabo%2C%20La%20Granja%2C%20Santiago%2C%20Chile" target="_blank" rel="noopener" hidden>Ver ruta aproximada en Google Maps ↗</a></label>
+            <div class="delivery-calculator">
+              <button class="button button-outline" id="calculate-delivery" type="button">Calcular precio de envío</button>
+              <small id="delivery-estimate" role="status" aria-live="polite">Ingresa los kilómetros de la ruta y calcula el envío.</small>
+            </div>
+          </div>
+          <small class="price-estimate full-width" id="order-total-estimate" aria-live="polite">Elige cómo quieres recibir tu taza.</small>
+          <label class="full-width">Cuéntanos qué tienes en mente<textarea name="message" rows="3" placeholder="¿Es para un regalo? ¿Tienes una fecha en mente?" maxlength="600"></textarea></label>
+        </div>
+        <label class="consent"><input type="checkbox" name="consent" required><span>Acepto que me contacten para conversar sobre este pedido.</span></label>
+        <button class="button button-primary submit-button" type="submit">Enviar mi pedido <span aria-hidden="true">↗</span></button>
+        <p class="form-note" id="form-note" aria-live="polite">Al enviar, el pedido llegará al panel de formularios de Netlify. Configura allí un aviso por correo.</p>
+      </form>
+    </section>
+
+    <section class="qr-section">
+      <div class="section-wrap qr-wrap">
+        <div><span class="eyebrow">COMPARTE TU IDEA</span><h2>Tu tienda, a un <em>escaneo.</em></h2><p>Imprime este código QR y ponlo en tu local, tus tarjetas o tus redes. Cualquier celular podrá abrir tu página para hacer un pedido.</p></div>
+        <div class="qr-card"><img id="qr-image" alt="Código QR para abrir Tazita Studio"><div><strong>Escanea y diseña</strong><small id="qr-description">Abre la página de pedidos</small></div><button class="text-link" id="copy-link" type="button">Copiar enlace <span aria-hidden="true">↗</span></button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">t.</span><span>Tazita <b>Studio</b><small>Hecho con cariño</small></span></a>
+    <p>Una taza hecha para ti, con cariño. <span>♡</span></p>
+    <a href="mailto:Mauriciodanielriveracruz@gmail.com">Hablemos de tu idea</a>
+  </footer>
+
+  <dialog class="inbox-dialog" id="inbox-dialog" aria-labelledby="inbox-title">
+    <div class="dialog-header"><div><span class="eyebrow">TU TALLER</span><h2 id="inbox-title">Bandeja de pedidos</h2></div><button class="close-dialog" id="close-inbox" type="button" aria-label="Cerrar">×</button></div>
+    <p class="inbox-notice">Esta bandeja conserva solo los pedidos guardados en este navegador. Los pedidos de clientes se consultan en Netlify, en el formulario «pedidos».</p>
+    <div class="order-list" id="order-list"></div>
+    <div class="empty-inbox" id="empty-inbox"><span>☕</span><h3>Tu próxima idea empieza aquí</h3><p>Los pedidos que envíes desde este navegador aparecerán en esta bandeja.</p></div>
+  </dialog>
+
+  <section class="chat-panel" id="help-chat" aria-label="Asistente de ayuda" aria-hidden="true" hidden>
+    <div class="chat-header">
+      <div class="chat-avatar" aria-hidden="true">t.</div>
+      <div><strong>Ayuda Tazita</strong><small><span></span> Respuestas rápidas</small></div>
+      <button class="close-chat" id="close-chat" type="button" aria-label="Cerrar asistente">×</button>
+    </div>
+    <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+    <div class="chat-topics" id="chat-topics">
+      <button type="button" data-question="¿Cómo puedo diseñar mi taza?">Diseño</button>
+      <button type="button" data-question="¿Cómo encargo una taza?">Hacer un pedido</button>
+      <button type="button" data-question="¿Cuánto tarda el envío de la taza?">Entrega y tiempos</button>
+    </div>
+    <form class="chat-form" id="chat-form">
+      <label class="visually-hidden" for="chat-input">Escribe tu pregunta</label>
+      <input id="chat-input" name="question" type="text" placeholder="Escribe tu pregunta…" maxlength="300" autocomplete="off" required>
+      <button type="submit" aria-label="Enviar pregunta">↑</button>
+    </form>
+    <p class="chat-disclaimer">Ayuda automática por temas. El historial se guarda solo en este navegador.</p>
+  </section>
+  <button class="chat-launcher" id="open-chat" type="button" aria-controls="help-chat" aria-expanded="false">
+    <span class="chat-launcher-icon" aria-hidden="true">✳</span><span>¿Te ayudo?</span>
+  </button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+</html>
